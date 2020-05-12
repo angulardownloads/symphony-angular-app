@@ -1,0 +1,37 @@
+
+<kendo-grid
+[data]="gridView"
+[pageSize]="pageSize"
+[skip]="skip"
+[pageable]="true"
+[height]="400"
+(pageChange)="pageChange($event)"
+>
+<kendo-grid-column #id field="id" title="ID">
+</kendo-grid-column><kendo-grid-column field="date" title="Date">
+</kendo-grid-column>
+<kendo-grid-column field="customer" title="Customer">
+</kendo-grid-column>
+<kendo-grid-column field="address1" title="Address1">
+</kendo-grid-column>
+<kendo-grid-column field="city" title="City">
+</kendo-grid-column>
+<kendo-grid-column field="postcode" title="Postcode">
+</kendo-grid-column>
+<kendo-grid-column field="country" title="Country">
+</kendo-grid-column>
+<kendo-grid-column field="amount" title="Amount">
+</kendo-grid-column>
+<kendo-grid-column field="status" title="Status">
+</kendo-grid-column>
+<kendo-grid-column field="deleted" title="Deleted">
+</kendo-grid-column>
+<kendo-grid-column field="last_modified" title="Last_modified">
+</kendo-grid-column>
+<kendo-grid-column field="Delete" title="Delete" width="120">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <a href="#" (click)="delete()" [ngStyle]="{'color':'red'}">Delete</a>
+    </ng-template>
+</kendo-grid-column>
+
+</kendo-grid>
